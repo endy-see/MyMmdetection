@@ -150,8 +150,10 @@ In `mmdet/datasets/my_dataset.py`:
 
 ```python
 from .coco import CocoDataset
+from .registry import DATASETS
 
 
+@DATASETS.register_module
 class MyDataset(CocoDataset):
 
     CLASSES = ('a', 'b', 'c', 'd', 'e')
@@ -213,7 +215,7 @@ There are two ways to work with custom datasets.
 
 We basically categorize model components into 4 types.
 
-- backbone: usually a FCN network to extract feature maps, e.g., ResNet, MobileNet.
+- backbone: usually an FCN network to extract feature maps, e.g., ResNet, MobileNet.
 - neck: the component between backbones and heads, e.g., FPN, PAFPN.
 - head: the component for specific tasks, e.g., bbox prediction and mask prediction.
 - roi extractor: the part for extracting RoI features from feature maps, e.g., RoI Align.
@@ -228,7 +230,7 @@ import torch.nn as nn
 from ..registry import BACKBONES
 
 
-@BACKBONES.register
+@BACKBONES.register_module
 class MobileNet(nn.Module):
 
     def __init__(self, arg1, arg2):
