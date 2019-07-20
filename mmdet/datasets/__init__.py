@@ -9,6 +9,7 @@ from .dataset_wrappers import ConcatDataset, RepeatDataset
 from .extra_aug import ExtraAugmentation
 from .handetable import HandeTable
 from .voc_hande import HandeTableTitleWithOtherTextDataset
+from .voc_hande_only_table import HandeOnlyTableDataset
 from .coco_fourpoints import CoCoFourPointsDataset
 from .registry import DATASETS
 from .builder import build_dataset
@@ -16,5 +17,5 @@ from .builder import build_dataset
 __all__ = [
     'CustomDataset', 'XMLDataset', 'CocoDataset', 'VOCDataset', 'GroupSampler',
     'DistributedGroupSampler', 'build_dataloader', 'to_tensor', 'random_scale',
-    'show_ann', 'ConcatDataset', 'RepeatDataset', 'ExtraAugmentation', 'WIDERFaceDataset', 'DATASETS', 'build_dataset', 'HandeTable', 'HandeTableTitleWithOtherTextDataset', 'CoCoFourPointsDataset'
+    'show_ann', 'ConcatDataset', 'RepeatDataset', 'ExtraAugmentation', 'WIDERFaceDataset', 'DATASETS', 'build_dataset', 'HandeTable', 'HandeTableTitleWithOtherTextDataset', 'CoCoFourPointsDataset', 'HandeOnlyTableDataset'
 ]
