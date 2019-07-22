@@ -1,6 +1,5 @@
 *.swp
 checkpoints/
-configs_zhym/
 models/
 results.*
 work_dirs/
